@@ -6,7 +6,7 @@ mvn clean verify
 
 Purpose of this project is to show the behaviour of https://github.com/temyers/cucumber-jvm-parallel-plugin
 
-When: 
+When in surefire-plugin below lines are added: 
 
 ```
 <argLine>
