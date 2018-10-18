@@ -42,12 +42,12 @@
 
                 <configuration>
                     <argLine>
-                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                         -Dcucumber.options="--plugin io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm"
+                          -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                          -Dcucumber.options="--plugin io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm"
                     </argLine>
                     <parallel>all</parallel>
                     <forkCount>5</forkCount>
-                    <reuseForks>true</reuseForks>
+                    <reuseForks>false</reuseForks>
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/*IT.class</include>
@@ -187,11 +187,32 @@
             <version>2.9</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.4.0-b180830.0359</version>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber3-jvm -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber3-jvm</artifactId>
             <version>2.7.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>3.0.0</version>
+            <!--<scope>test</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.14.0</version>
         </dependency>
 
 
